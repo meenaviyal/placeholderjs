@@ -4,6 +4,9 @@
 
 SVG Placeholder Library is a lightweight JavaScript library that dynamically generates SVG placeholder images for web development. It replaces `<img>` elements with specified classes with colorful, randomly generated SVG placeholders, making it easy to visualize layouts and design mockups without the need for external placeholder image services.
 
+## Demo
+[Visit Demo](https://meenaviyal.github.io/placeholderjs/)
+
 ![Demo Screenshot](image.png)
 
 ## Features

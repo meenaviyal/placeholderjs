@@ -3,17 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Placeholder Library</title>
+    <title>Placeholder.js - Dynamic SVG Placeholders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        code {
+            font-family: 'Fira Code', monospace;
+        }
+    </style>
 </head>
-<body>
-    <h1>SVG Placeholder Library Demo</h1>
-    <p><i>Refresh the page to see new images</i><p>
-    <!-- Example usage -->
-    <img class="placeholder-200-100" alt="Placeholder 200x100">
-    <img class="placeholder-300-150" alt="Placeholder 300x150">
-    <img class="placeholder-150-150" alt="Placeholder 150x150">
+<body class="bg-gray-100 text-gray-900 leading-normal">
+    <header class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <h1 id="placeholder.js" class="text-3xl font-bold mb-4 md:mb-0">Placeholder.js</h1>
+                <nav>
+                    <ul class="flex flex-wrap justify-center space-x-4">
+                        <li><a href="#features" class="hover:text-yellow-300 transition-colors">Features</a></li>
+                        <li><a href="#demo" class="hover:text-yellow-300 transition-colors">Demo</a></li>
+                        <li><a href="#installation" class="hover:text-yellow-300 transition-colors">Installation</a></li>
+                        <li><a href="#usage" class="hover:text-yellow-300 transition-colors">Usage</a></li>
+                        <li><a href="https://github.com/meenaviyal/placeholderjs" class="hover:text-yellow-300 transition-colors" target="_blank">GitHub</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-    <!-- Include the SVG Placeholder Library -->
-    <script src="placeholder.js"></script>
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-12 bg-white rounded-lg shadow-md p-6">
+            <h2 id="dynamic-svg-placeholders" class="text-3xl font-bold mb-4 text-blue-600">Dynamic SVG Placeholders</h2>
+            <p class="text-xl mb-6">Placeholder.js is a lightweight JavaScript library for generating dynamic SVG placeholders. Perfect for mockups, prototypes, and layouts.</p>
+            <a href="#installation" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors">Get Started</a>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <section id="features" class="md:col-span-1 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">Features</h2>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Dynamic SVG generation</li>
+                    <li>Customizable dimensions</li>
+                    <li>Colorful designs</li>
+                    <li>Displays dimensions</li>
+                    <li>Lightweight integration</li>
+                    <li>No dependencies</li>
+                </ul>
+            </section>
+
+            <section id="demo" class="md:col-span-2 bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-2xl font-bold mb-4 text-blue-600">Demo</h2>
+                <p class="mb-4">Refresh the page to see new placeholder images:</p>
+                <div class="grid grid-cols-2 lg:grid-cols-3 gap-4">
+                    <img class="placeholder-200-100 w-full" alt="Placeholder 200x100">
+                    <img class="placeholder-300-150 w-full" alt="Placeholder 300x150">
+                    <img class="placeholder-150-150 w-full" alt="Placeholder 150x150">
+                    <img class="placeholder-250-200 w-full" alt="Placeholder 250x200">
+                    <img class="placeholder-180-120 w-full" alt="Placeholder 180x120">
+                    <img class="placeholder-220-180 w-full" alt="Placeholder 220x180">
+                </div>
+            </section>
+        </div>
+
+        <section id="installation" class="my-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Installation</h2>
+            <div class="space-y-4">
+                <div>
+                    <p class="mb-2">Include the script in your HTML file:</p>
+                    <pre><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/meenaviyal/placeholderjs@main/placeholder.js"&gt;&lt;/script&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="usage" class="my-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Usage</h2>
+            <p class="mb-4">Use <code class="bg-gray-200 px-1 rounded">img</code> elements with classes in the format <code class="bg-gray-200 px-1 rounded">placeholder-[width]-[height]</code>:</p>
+            <pre><code class="language-html">&lt;img class="placeholder-200-100" alt="Placeholder 200x100"&gt;
+&lt;img class="placeholder-300-150" alt="Placeholder 300x150"&gt;
+&lt;img class="placeholder-150-150" alt="Placeholder 150x150"&gt;</code></pre>
+            <p class="mt-4">The library will automatically replace these images with SVG placeholders when the page loads.</p>
+        </section>
+
+        <section id="browser-support" class="my-12 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold mb-4 text-blue-600">Browser Support</h2>
+            <p>Placeholder.js works in all modern browsers that support SVG and ES6 JavaScript.</p>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Meenaviyal | <a href="https://github.com/meenaviyal/placeholderjs" class="hover:text-yellow-300 transition-colors" target="_blank">GitHub</a> | <a href="#" class="hover:text-yellow-300 transition-colors">Documentation</a> | <a href="#" class="hover:text-yellow-300 transition-colors">Contributing</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/meenaviyal/placeholderjs@main/placeholder.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
 </body>
 </html>
